@@ -10,11 +10,13 @@ import '../user/user_model.dart';
 
 part 'post_model.freezed.dart';
 part 'post_model.g.dart';
+part 'post_model.hive.dart';
 
 // flutter pub run build_runner build --delete-conflicting-outputs
 @freezed
-@HiveType(typeId: 2, adapterName: 'PostModelAdapter')
 class PostModel with _$PostModel {
+  const PostModel._();
+  @HiveType(typeId: 2, adapterName: 'PostModelAdapter')
   @JsonSerializable(explicitToJson: true) // This needed for sub classes only
   const factory PostModel({
     // required List<CommentsModel> comments,
@@ -35,5 +37,3 @@ class PostModel with _$PostModel {
   factory PostModel.fromJson(Map<String, dynamic> json) =>
       _$PostModelFromJson(json);
 }
-
-

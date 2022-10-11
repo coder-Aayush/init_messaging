@@ -266,8 +266,9 @@ class __$$_PostModelCopyWithImpl<$Res> extends _$PostModelCopyWithImpl<$Res>
 
 /// @nodoc
 
+@HiveType(typeId: 2, adapterName: 'PostModelAdapter')
 @JsonSerializable(explicitToJson: true)
-class _$_PostModel implements _PostModel {
+class _$_PostModel extends _PostModel {
   const _$_PostModel(
       {@HiveField(0) this.textContent = '',
       @HiveField(1) this.postId = '',
@@ -280,7 +281,8 @@ class _$_PostModel implements _PostModel {
       @HiveField(8) this.textAlign = TextAlign.center,
       @HiveField(9) this.likeCounter,
       @HiveField(10) this.photoCover,
-      @HiveField(11) @ColorIntConv() this.colorCover});
+      @HiveField(11) @ColorIntConv() this.colorCover})
+      : super._();
 
   factory _$_PostModel.fromJson(Map<String, dynamic> json) =>
       _$$_PostModelFromJson(json);
@@ -394,7 +396,7 @@ class _$_PostModel implements _PostModel {
   }
 }
 
-abstract class _PostModel implements PostModel {
+abstract class _PostModel extends PostModel {
   const factory _PostModel(
       {@HiveField(0) final String textContent,
       @HiveField(1) final String postId,
@@ -408,6 +410,7 @@ abstract class _PostModel implements PostModel {
       @HiveField(9) final int? likeCounter,
       @HiveField(10) final String? photoCover,
       @HiveField(11) @ColorIntConv() final Color? colorCover}) = _$_PostModel;
+  const _PostModel._() : super._();
 
   factory _PostModel.fromJson(Map<String, dynamic> json) =
       _$_PostModel.fromJson;

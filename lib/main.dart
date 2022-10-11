@@ -1,5 +1,3 @@
-
-
 import 'package:example/common/models/user/user_model.dart';
 import 'package:example/common/routes/app_router.gr.dart';
 import 'package:example/screens/main_ui/splash_screen.dart' as click;
@@ -35,8 +33,7 @@ void main() async {
   print('HiveServices.uniBox.values ${HiveServices.uniBox.values}');
   HiveServices.uniBox.put('user', Sample.user);
 
-
-  return;
+  // return;
   runApp(
     MultiProvider(
         providers: [
