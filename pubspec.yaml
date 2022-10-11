@@ -42,6 +42,11 @@ dependencies:
   font_awesome_flutter: ^10.2.1
   flutter_colorpicker: ^1.0.3
   hive: ^2.2.3
+  hive_flutter:
+     git:
+       url: https://github.com/yura2000/hive.git
+       ref: master
+       path: hive_flutter/
   path_provider: ^2.0.11
   string_to_hex: ^0.2.2
   shared_preferences: ^2.0.15

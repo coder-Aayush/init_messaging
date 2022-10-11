@@ -7,6 +7,7 @@ import '../convertors.dart';
 
 part 'message_model.freezed.dart';
 part 'message_model.g.dart';
+part 'message_model.hive.dart';
 
 // flutter pub run build_runner build --delete-conflicting-outputs
 @freezed

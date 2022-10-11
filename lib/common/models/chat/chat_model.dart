@@ -7,6 +7,7 @@ import '../user/user_model.dart';
 
 part 'chat_model.freezed.dart';
 part 'chat_model.g.dart';
+part 'chat_model.hive.dart';
 
 // flutter pub run build_runner build --delete-conflicting-outputs
 @freezed

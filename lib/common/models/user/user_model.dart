@@ -7,12 +7,17 @@ import '../convertors.dart';
 
 part 'user_model.freezed.dart';
 part 'user_model.g.dart';
+part 'user_model.hive.dart';
 
 @HiveType(typeId: 5)
 enum GenderTypes {
-  @HiveField(0) boy,
-  @HiveField(1) girl,
-  @HiveField(2) lgbt }
+  @HiveField(0)
+  boy,
+  @HiveField(1)
+  girl,
+  @HiveField(2)
+  lgbt
+}
 
 // flutter pub run build_runner build --delete-conflicting-outputs
 @freezed
@@ -29,5 +34,6 @@ class UserModel with _$UserModel {
     @HiveField(6) @DateTimeStampConv() DateTime? birthday,
   }) = _UserModel;
 
-  factory UserModel.fromJson(Map<String, dynamic> json) => _$UserModelFromJson(json);
+  factory UserModel.fromJson(Map<String, dynamic> json) =>
+      _$UserModelFromJson(json);
 }
